@@ -1,0 +1,44 @@
+import java.util.Scanner;
+
+public class IT22195616Lab8Q2 {
+
+    public static void main(String[]args) {
+	
+        Scanner input = new Scanner(System.in);
+        
+        
+        int AArray[] = {10, 20, 30, 40, 50};
+        int BArray[] = {34, 67, 12, 89, 12};
+        int CArray[] = new int[5];
+        int i;
+        
+        System.out.println("A array contents are: ");
+        
+        for (i=0; i<AArray.length; i++)
+        {
+            System.out.print(+AArray[i] +" ");
+        }
+        
+        System.out.println();
+        System.out.println("B array contents are: ");
+        
+        for (i=0; i<BArray.length; i++)
+        {
+            System.out.print(+BArray[i] +" ");
+        }
+        
+        System.out.println();
+        System.out.println("C array contents are (A+B): ");
+        
+        for (i=0; i<CArray.length; i++)
+        {
+           CArray[i]= AArray[i]+ BArray[i];        
+        }
+        
+        for (i=0; i<CArray.length; i++)
+        {
+            System.out.print(+CArray[i] +" ");
+        }
+        
+    }
+}
