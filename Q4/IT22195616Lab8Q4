@@ -1,0 +1,46 @@
+import java.util.Scanner;
+public class IT22195616Lab8Q4 {
+    public static void main(String[]args) {
+        Scanner input = new Scanner(System.in) ;
+        
+        int studentArray[] = new int [8];
+        int i;
+        boolean found = false;
+        
+        for (i=0; i<studentArray.length; i++)
+        {
+            System.out.print("Enter Student ID for Student "+(i+1) +": ");
+            int sID = input.nextInt();
+            
+            if (sID > 0)
+            {
+                studentArray[i] = sID;
+            }
+            else
+            {
+                i--;
+                System.out.println("Error: Please Enter ONLY Positive Numbers");
+            }
+        }
+        
+        System.out.print("Enter a Student ID To Search: ");
+        int searchID = input.nextInt();
+        
+        for (i = 0; i < studentArray.length; i++)
+        {
+            if (studentArray[i] == searchID)
+            {
+                found = true;
+            }
+        }
+
+        if (found)
+        {
+            System.out.println("Student is Available");
+        }
+        else
+        {
+            System.out.println("Student is Not Available");
+        }
+    }
+}
